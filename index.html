@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+
+  <!-- Primary SEO -->
+  <title>mas_</title>
+  <meta name="description"
+    content="mas_ | Özel web geliştirme, performans mühendisliği ve ölçeklenebilir dijital ürünler. Custom web development, performance engineering & digital products." />
+  <meta name="keywords"
+    content="mas, dijital ajans, web geliştirme, custom web development, UX UI tasarım, performans optimizasyonu, SEO, modern web, digital agency" />
+  <meta name="author" content="mas_" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <link rel="canonical" href="https://mas.dev/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mas.dev/" />
+  <meta property="og:title" content="mas_" />
+  <meta property="og:description"
+    content="Şablon değil, mühendislik. Performans odaklı, ölçeklenebilir ve erişilebilir web çözümleri." />
+  <meta property="og:site_name" content="mas_" />
+  <meta property="og:locale" content="tr_TR" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="mas_" />
+  <meta name="twitter:description"
+    content="Şablon değil, mühendislik. Performans odaklı, ölçeklenebilir ve erişilebilir web çözümleri." />
+  <meta name="twitter:site" content="@mas_dev" />
+
+  <!-- Theme & Mobile -->
+  <meta name="theme-color" content="#000000" />
+  <meta name="msapplication-TileColor" content="#000000" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-mobile-web-app-title" content="mas_" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "mas_",
+    "url": "https://mas.dev",
+    "description": "High-end digital agency specializing in modern web development, performance engineering, UX/UI design, and scalable digital products.",
+    "foundingDate": "2019",
+    "sameAs": [
+      "https://www.instagram.com/masdev.ist/",
+      "https://www.tiktok.com/@masdev.ist"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "hello@mas.dev",
+      "contactType": "customer service"
+    },
+    "knowsAbout": ["Web Development", "UX/UI Design", "Performance Engineering", "SEO", "Accessibility"]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23000'/><text x='16' y='22' font-family='Arial,sans-serif' font-weight='900' font-size='13' fill='%23FFF' text-anchor='middle' letter-spacing='-0.5'>mas_</text></svg>"
+    type="image/svg+xml" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css?v=2.4" />
+</head>
+
+<body>
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo" id="logo" aria-label="mas home">mas<span class="blink-cursor">_</span></a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="#services" class="nav-link" data-nav data-i18n="nav_services">HİZMETLER</a></li>
+          <li><a href="#why-mas" class="nav-link" data-nav data-i18n="nav_why">NEDEN MAS?</a></li>
+          <li><a href="#process" class="nav-link" data-nav data-i18n="nav_process">SÜREÇ</a></li>
+          <li><a href="#insights" class="nav-link" data-nav data-i18n="nav_insights">DETAYLAR</a></li>
+          <li><a href="#contact" class="nav-link" data-nav data-i18n="nav_contact">İLETİŞİM</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions" id="header-actions">
+        <div class="social-icons">
+          <!-- Twitter / X -->
+          <a href="https://x.com/masdevist" class="icon-link" aria-label="X (Twitter)" id="social-twitter" target="_blank"
+            rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+              <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+            </svg>
+          </a>
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/masdev.ist/" class="icon-link" aria-label="Instagram" id="social-instagram"
+            target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="5" />
+              <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" />
+            </svg>
+          </a>
+          <!-- TikTok -->
+          <a href="https://www.tiktok.com/@masdev.ist" class="icon-link" aria-label="TikTok" id="social-tiktok"
+            target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+            </svg>
+          </a>
+        </div>
+        <div class="search-divider"></div>
+        <!-- Language Switcher -->
+        <div class="lang-switcher" id="lang-switcher">
+          <button class="lang-btn active" data-lang="tr" id="lang-tr">TR</button>
+          <span class="lang-sep"></span>
+          <button class="lang-btn" data-lang="en" id="lang-en">ENG</button>
+        </div>
+        <!-- Mobile menu toggle -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main class="site-main" id="site-main">
+
+    <!-- HERO STRIP -->
+    <section class="hero-strip" id="hero-strip">
+      <div class="hero-inner">
+        <h1 class="hero-title">
+          <span class="hero-line" data-reveal>your vision</span>
+          <span class="hero-line" data-reveal>our code</span>
+        </h1>
+        <div class="hero-meta">
+          <span class="hero-scroll-hint">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <polyline points="19 12 12 19 5 12" />
+            </svg>
+            <span data-i18n="hero_scroll">AŞAĞI KAYDIR</span>
+          </span>
+          <span class="hero-index">001</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT GRID: LEFT + RIGHT -->
+    <div class="content-grid" id="content-area">
+
+      <!-- ===== LEFT COLUMN ===== -->
+      <div class="col-left">
+
+        <!-- MODULE: Modern Web vs Templates -->
+        <article class="module" id="services" data-module>
+          <div class="module-header">
+            <span class="module-index">01</span>
+            <h2 class="module-title" data-i18n="mod1_title">MODERN WEB VS. ŞABLONLAR</h2>
+          </div>
+          <div class="module-body two-col-text">
+            <div>
+              <p data-i18n="mod1_p1">Hazır şablonlarla yapılan siteler ucuza ve çabuk çıkar ama hep aynı kalıptan çıkmış gibi durur. Bir de arka tarafta kimsenin kullanmadığı bir sürü eklenti, gereksiz kod ve siteyi ağırlaştıran dosyalar yığılır. Kısacası, o site sizin değil. Herkesin sitesi.</p>
+              <p data-i18n="mod1_p2"><strong>mas_</strong> olarak biz işi farklı yapıyoruz. Her projeyi en baştan, tamamen sizin ihtiyaçlarınıza göre kodluyoruz. Gereksiz hiçbir şey yok. Ne fazla kod, ne yavaşlatan eklenti. Sadece sizin işinize yarayan, hızlı ve doğru çalışan bir site.</p>
+            </div>
+            <div>
+              <p data-i18n="mod1_p3">Bugünün dünyasında bir site sadece güzel görünse yetmiyor. Hızlı açılması lazım, telefonda da düzgün çalışması lazım, Google'da çıkması lazım, herkesin rahatça kullanabilmesi lazım. Bunları sürükle-bırak araçlarıyla yapmaya çalışmak... pek gerçekçi değil.</p>
+              <p data-i18n="mod1_p4">Biz hazır temaları alıp üstünü değiştirmiyoruz. Sizin işinize özel, sıfırdan çözüm üretiyoruz. Sonuçta elinizde rakiplerden hızlı, Google'da görünür ve işiniz büyüdükçe rahatça büyüyebilen bir site kalıyor.</p>
+            </div>
+          </div>
+
+          <!-- INTERACTIVE TERMINAL: TEMPLATE vs mas_ CODE -->
+          <div class="code-terminal" id="code-terminal">
+            <div class="terminal-header">
+              <div class="terminal-status">
+                <span class="status-dot custom" id="terminal-dot"></span>
+                <span class="status-text" id="terminal-status-text">STATUS: ENGINEERED / 50ms / 3 REQS</span>
+              </div>
+              <div class="terminal-tabs">
+                <button class="terminal-tab" data-mode="template" data-i18n="term_tab_template">[ 01 / ŞABLON KİRLİLİĞİ ]</button>
+                <button class="terminal-tab active" data-mode="custom" data-i18n="term_tab_custom">[ 02 / mas_ ÖZEL KOD ]</button>
+              </div>
+            </div>
+            <div class="terminal-code-area">
+              <pre><code id="terminal-code-content"></code></pre>
+            </div>
+            <div class="terminal-footer">
+              <span class="terminal-note" id="terminal-note" data-i18n="term_note_custom">Sıfır gereksiz veri. 100/100 Lighthouse Performans. Saf, semantik HTML5.</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- MODULE: Deep Dive — Performance -->
+        <article class="module" id="why-mas" data-module>
+          <div class="module-header">
+            <span class="module-index">02</span>
+            <h2 class="module-title" data-i18n="mod2_title">
+              YAKINDAN BAKALIM: PERFORMANS
+              <span class="inline-icons">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                </svg>
+              </span>
+            </h2>
+          </div>
+          <div class="module-body">
+            <div class="perf-grid">
+              <div class="perf-card" data-module>
+                <div class="perf-metric">
+                  <span class="perf-number" data-count="98">0</span>
+                </div>
+                <div class="perf-label" data-i18n="mod2_m1">Lighthouse<br />Performans</div>
+              </div>
+              <div class="perf-card" data-module>
+                <div class="perf-metric">
+                  <span class="perf-number" data-count="50">0</span><span class="perf-unit">ms</span>
+                </div>
+                <div class="perf-label" data-i18n="mod2_m2">İlk Tepki<br />Süresi</div>
+              </div>
+              <div class="perf-card" data-module>
+                <div class="perf-metric">
+                  <span class="perf-number" data-count="0.8" data-decimal="true">0</span><span
+                    class="perf-unit">s</span>
+                </div>
+                <div class="perf-label" data-i18n="mod2_m3">Sayfa Açılış<br />Hızı</div>
+              </div>
+              <div class="perf-card" data-module>
+                <div class="perf-metric">
+                  <span class="perf-number" data-count="0">0</span>
+                </div>
+                <div class="perf-label" data-i18n="mod2_m4">Görsel<br />Kayma Oranı</div>
+              </div>
+            </div>
+            <p class="module-note" data-i18n="mod2_note">Her projemizi Google'ın performans kriterlerine göre test ediyoruz. Tüm sonuçlar yeşil olmadan siteyi yayına almıyoruz.</p>
+          </div>
+        </article>
+
+        <!-- MODULE: Advantages -->
+        <article class="module" id="process" data-module>
+          <div class="module-header">
+            <span class="module-index">03</span>
+            <h2 class="module-title" data-i18n="mod3_title">AVANTAJLAR</h2>
+          </div>
+          <div class="module-body">
+            <ul class="advantage-list">
+              <li data-module>
+                <span class="adv-marker">+</span>
+                <div>
+                  <strong data-i18n="adv1_title">Gereksiz Kod Yok</strong>
+                  <p data-i18n="adv1_desc">Yazdığımız her satırın bir sebebi var. Kullanılmayan dosya yok, gereksiz eklenti yok, siteyi yavaşlatan hiçbir şey yok.</p>
+                </div>
+              </li>
+              <li data-module>
+                <span class="adv-marker">+</span>
+                <div>
+                  <strong data-i18n="adv2_title">Her Şey Sizin</strong>
+                  <p data-i18n="adv2_desc">Sitenin tamamı size ait. Tasarımı, kodu, her şeyi. Hiçbir platforma bağımlı kalmazsınız, kimseye aylık ödeme yapmazsınız.</p>
+                </div>
+              </li>
+              <li data-module>
+                <span class="adv-marker">+</span>
+                <div>
+                  <strong data-i18n="adv3_title">Büyümeye Hazır</strong>
+                  <p data-i18n="adv3_desc">Siteyi parça parça, modüler kuruyoruz. İleride yeni sayfa veya özellik eklemek istediğinizde temeli bozmadan kolayca eklenebiliyor.</p>
+                </div>
+              </li>
+              <li data-module>
+                <span class="adv-marker">+</span>
+                <div>
+                  <strong data-i18n="adv4_title">Herkes Kullanabilsin</strong>
+                  <p data-i18n="adv4_desc">Erişilebilirlik sonradan eklenen bir şey değil, daha ilk günden sitenin yapısına dahil. Klavyeyle gezinme, ekran okuyucu desteği, doğru HTML yapısı hep hazır.</p>
+                </div>
+              </li>
+              <li data-module>
+                <span class="adv-marker">+</span>
+                <div>
+                  <strong data-i18n="adv5_title">Google Sizi Sevsin</strong>
+                  <p data-i18n="adv5_desc">Temiz kod, hızlı yüklenme, doğru yapılandırılmış veri. Arama motorlarının sitenizi bulup üst sıralara çıkarması için ne gerekiyorsa altyapıda var.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- MODULE: Disadvantages -->
+        <article class="module" id="insights" data-module>
+          <div class="module-header">
+            <span class="module-index">04</span>
+            <h2 class="module-title" data-i18n="mod4_title">DEZAVANTAJLAR</h2>
+          </div>
+          <div class="module-body">
+            <ul class="advantage-list disadvantage-list">
+              <li data-module>
+                <span class="adv-marker">−</span>
+                <div>
+                  <strong data-i18n="dis1_title">Başlangıçta Daha Pahalı</strong>
+                  <p data-i18n="dis1_desc">Özel geliştirme, hazır şablona göre başta daha fazla bütçe ister. Ama uzun vadede çok daha avantajlı çıkıyor.</p>
+                </div>
+              </li>
+              <li data-module>
+                <span class="adv-marker">−</span>
+                <div>
+                  <strong data-i18n="dis2_title">Biraz Daha Zaman Alır</strong>
+                  <p data-i18n="dis2_desc">Kaliteli iş aceleye gelmez. Her detayı düşünüyor, test ediyor, ince ayar yapıyoruz. Bu yüzden birkaç gün değil birkaç hafta sürüyor.</p>
+                </div>
+              </li>
+              <li data-module>
+                <span class="adv-marker">−</span>
+                <div>
+                  <strong data-i18n="dis3_title">Teknik Destek Gerekebilir</strong>
+                  <p data-i18n="dis3_desc">İleride yapılacak güncellemeler ve eklemeler için teknik bilgi lazım. Ama merak etmeyin, biz uzun vadeli destek paketleriyle bu işi sizin için kolay hale getiriyoruz.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ===== RIGHT COLUMN ===== -->
+      <div class="col-right">
+
+        <article class="module anatomy-module" id="portfolio" data-module>
+          <div class="module-header">
+            <span class="module-index">∎</span>
+            <h2 class="module-title" data-i18n="anat_title">BİR WEB SAYFASININ ANATOMİSİ</h2>
+          </div>
+          <div class="module-body">
+
+            <!-- Anatomy Diagram -->
+            <div class="anatomy-diagram">
+
+              <!-- Browser chrome -->
+              <div class="anatomy-browser" data-module>
+                <div class="browser-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="browser-url">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="3" y="11" width="18" height="11" rx="2" />
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  </svg>
+                  <span>https://your-project.mas.dev</span>
+                </div>
+              </div>
+
+              <!-- Page wireframe -->
+              <div class="anatomy-page">
+                <div class="anat-section anat-header" data-module>
+                  <div class="anat-block-label">HEADER / NAV</div>
+                  <div class="anat-placeholder-bar"></div>
+                  <div class="anat-placeholder-dots">
+                    <span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+                <div class="anat-section anat-hero" data-module>
+                  <div class="anat-block-label">HERO</div>
+                  <div class="anat-hero-lines">
+                    <div class="anat-line anat-line--lg"></div>
+                    <div class="anat-line anat-line--md"></div>
+                    <div class="anat-line anat-line--sm"></div>
+                  </div>
+                </div>
+                <div class="anat-section anat-content" data-module>
+                  <div class="anat-block-label">CONTENT</div>
+                  <div class="anat-content-grid">
+                    <div class="anat-card"></div>
+                    <div class="anat-card"></div>
+                    <div class="anat-card"></div>
+                  </div>
+                </div>
+                <div class="anat-section anat-footer" data-module>
+                  <div class="anat-block-label">FOOTER</div>
+                  <div class="anat-placeholder-bar anat-placeholder-bar--short"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Anatomy Detail Cards -->
+            <div class="anatomy-details">
+
+              <div class="anatomy-card" data-module>
+                <div class="anatomy-card-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                  </svg>
+                </div>
+                <h3 data-i18n="anat_perf_title">PERFORMANS</h3>
+                <p data-i18n="anat_perf_desc">Sayfalarınız bir saniyenin altında açılır. Bunu akıllı kod bölme, gecikmeli yükleme ve önbellekleme ile sağlıyoruz.</p>
+                <div class="anatomy-card-meter">
+                  <div class="meter-track">
+                    <div class="meter-fill" data-fill="96"></div>
+                  </div>
+                  <span class="meter-value">96 / 100</span>
+                </div>
+              </div>
+
+              <div class="anatomy-card" data-module>
+                <div class="anatomy-card-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="7" height="7" />
+                    <rect x="14" y="3" width="7" height="7" />
+                    <rect x="14" y="14" width="7" height="7" />
+                    <rect x="3" y="14" width="7" height="7" />
+                  </svg>
+                </div>
+                <h3 data-i18n="anat_ux_title">UX / UI</h3>
+                <p data-i18n="anat_ux_desc">Araştırmaya dayalı arayüzler, akıcı geçişler ve her ekran boyutuna kusursuz uyan tasarımlar.</p>
+                <div class="anatomy-card-tags">
+                  <span class="tag">Figma → Code</span>
+                  <span class="tag">Motion</span>
+                  <span class="tag">A/B Testing</span>
+                </div>
+              </div>
+
+              <div class="anatomy-card" data-module>
+                <div class="anatomy-card-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <!-- Desktop -->
+                    <rect x="2" y="3" width="20" height="14" rx="2" />
+                    <line x1="8" y1="21" x2="16" y2="21" />
+                    <line x1="12" y1="17" x2="12" y2="21" />
+                  </svg>
+                  <svg width="14" height="24" viewBox="0 0 14 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" class="icon-phone">
+                    <rect x="1" y="1" width="12" height="22" rx="2" />
+                    <line x1="5" y1="19" x2="9" y2="19" />
+                  </svg>
+                </div>
+                <h3 data-i18n="anat_resp_title">DUYARLI</h3>
+                <p data-i18n="anat_resp_desc">Siteniz telefonda da tablette de büyük ekranda da aynı kalitede görünür. Esnek yapısı sayesinde her cihaza doğal uyum sağlar.</p>
+                <div class="anatomy-card-breakpoints">
+                  <div class="bp"><span class="bp-label">SM</span><span class="bp-val">640</span></div>
+                  <div class="bp"><span class="bp-label">MD</span><span class="bp-val">768</span></div>
+                  <div class="bp"><span class="bp-label">LG</span><span class="bp-val">1024</span></div>
+                  <div class="bp"><span class="bp-label">XL</span><span class="bp-val">1280</span></div>
+                  <div class="bp"><span class="bp-label">2XL</span><span class="bp-val">1536</span></div>
+                </div>
+              </div>
+
+              <div class="anatomy-card" data-module>
+                <div class="anatomy-card-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="2" y1="12" x2="22" y2="12" />
+                    <path
+                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                  </svg>
+                </div>
+                <h3 data-i18n="anat_seo_title">SEO / ERİŞİLEBİLİRLİK</h3>
+                <p data-i18n="anat_seo_desc">Doğru HTML yapısı, yapılandırılmış veri ve hız odaklı altyapı ile arama motorlarında en iyi yerde olursunuz.</p>
+                <div class="anatomy-card-checklist">
+                  <div class="check-item"><span class="check-icon">✓</span> Schema.org Markup</div>
+                  <div class="check-item"><span class="check-icon">✓</span> ARIA Landmarks</div>
+                  <div class="check-item"><span class="check-icon">✓</span> Alt Text Pipeline</div>
+                  <div class="check-item"><span class="check-icon">✓</span> Sitemap + Robots</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- CONTACT STRIP -->
+    <section class="contact-strip" id="contact">
+      <div class="contact-inner">
+        <div class="contact-label" data-i18n="contact_label">PROJENİZİ KONUŞALIM MI?</div>
+        <div class="contact-heading" data-i18n="contact_heading">BİZE YAZIN<span class="blink-cursor">_</span></div>
+        <a href="mailto:hello@mas.dev" class="contact-email" id="contact-email">hello@mas.dev</a>
+        
+        <!-- Footer Social Icons -->
+        <div class="footer-social-icons">
+          <a href="https://x.com/masdevist" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+              <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/masdev.ist/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="5" />
+              <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" />
+            </svg>
+          </a>
+          <a href="https://www.tiktok.com/@masdev.ist" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+            </svg>
+          </a>
+        </div>
+        <div class="contact-line"></div>
+        <div class="contact-footer">
+          <span data-i18n="footer_copy">© 2026 mas_. Tüm hakları saklıdır.</span>
+          <span data-i18n="footer_craft">Titizlikle üretildi.</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="main.js?v=2.0"></script>
+</body>
+
+</html>
