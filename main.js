@@ -385,7 +385,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const lanyardOrigin = document.getElementById('lanyardOrigin');
   const lanyardCard = document.getElementById('lanyardCard');
   const lanyardCardInner = document.getElementById('lanyardCardInner');
-  const lanyardHint = document.getElementById('lanyardHint');
   const lanyardWrapper = document.getElementById('lanyardWrapper');
 
   if (lanyardSwing && lanyardOrigin && lanyardCard && lanyardCardInner) {
@@ -417,9 +416,6 @@ document.addEventListener('DOMContentLoaded', () => {
     lanyardCard.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleFlip(); }
     });
-    if (lanyardHint) {
-      lanyardHint.addEventListener('click', (e) => { e.stopPropagation(); toggleFlip(); });
-    }
 
     // Block browser ghost-image dragging
     lanyardCard.addEventListener('dragstart', (e) => e.preventDefault());
