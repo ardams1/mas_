@@ -6,56 +6,74 @@
 const translations = {
   en: {
     nav_services: 'SERVICES',
-    nav_why: 'WHY MAS?',
-    nav_process: 'PROCESS',
+    nav_why: 'WHY MAS ?',
     nav_insights: 'INSIGHTS',
     nav_contact: 'CONTACT',
     hero_label: 'DIGITAL AGENCY — EST. 2019',
-    hero_scroll: 'SCROLL TO EXPLORE',
-    mod1_title: 'MODERN WEB VS. TEMPLATES',
+    mod1_title: 'WHY MAS ?',
     mod1_p1: 'Template websites go up fast and cheap, but they all look the same. Under the hood, they\'re packed with hundreds of lines of code you\'ll never use, unnecessary plugins, and files that slow everything down. In short: that site wasn\'t built for you.',
     mod1_p2: 'At <strong>mas</strong>, we write every project from scratch, tailored to you. Not a single unnecessary line of code in your site. Everything is designed for your needs, loads fast, and works exactly the way you want.',
-    mod1_p3: 'A good website today doesn\'t just look nice. It needs to load fast, work smoothly on phones, rank high on Google, and be accessible to everyone. Drag-and-drop tools simply can\'t deliver that.',
     mod1_p4: 'We don\'t tweak ready-made templates. We build solutions custom-made for your business. The result: a website that\'s faster than your competitors, ranks better on Google, and scales easily as your business grows.',
-    mod2_title: 'DEEP DIVE: PERFORMANCE',
-    mod2_m1: 'Lighthouse<br/>Performance',
-    mod2_m2: 'First Input<br/>Delay',
-    mod2_m3: 'Largest Contentful<br/>Paint',
-    mod2_m4: 'Cumulative<br/>Layout Shift',
-    mod2_note: 'Every project is benchmarked against Core Web Vitals. We don\u2019t launch until every metric is green.',
-    mod3_title: 'ADVANTAGES',
-    adv1_title: 'Zero Bloat',
-    adv1_desc: 'Every line of code is written with purpose. No unused CSS, no redundant JavaScript, no third-party overhead.',
-    adv2_title: 'Total Ownership',
-    adv2_desc: 'You own every asset, every component, every pixel. No vendor lock-in, no recurring platform fees.',
-    adv3_title: 'Scalable Architecture',
-    adv3_desc: 'Component-driven systems built to grow. Add features, pages, and integrations without rewriting your foundation.',
-    adv4_title: 'Accessibility First',
-    adv4_desc: 'Semantic markup, ARIA patterns, and keyboard navigation baked in from day one. Not bolted on after launch.',
-    adv5_title: 'SEO by Architecture',
-    adv5_desc: 'Clean DOM, fast rendering, structured data, and server-side rendering ensure search engines love your site.',
-    mod4_title: 'DISADVANTAGES',
-    dis1_title: 'Higher Initial Investment',
-    dis1_desc: 'Custom development requires more upfront time and budget than off-the-shelf templates.',
-    dis2_title: 'Longer Development Cycle',
-    dis2_desc: 'Precision engineering takes weeks, not days. Every detail is considered, tested, and refined.',
-    dis3_title: 'Requires Technical Partnership',
-    dis3_desc: 'Ongoing updates and feature additions need skilled developers. We provide long-term support plans to bridge this.',
-    anat_title: 'ANATOMY OF A WEB PAGE',
-    anat_perf_title: 'PERFORMANCE',
-    anat_perf_desc: 'Sub-second load times through code splitting, lazy loading, edge caching, and optimised critical rendering paths.',
-    anat_ux_title: 'UX / UI',
-    anat_ux_desc: 'Research-driven interfaces with micro-interactions, motion design, and pixel-perfect implementation across every breakpoint.',
-    anat_resp_title: 'RESPONSIVE',
-    anat_resp_desc: 'Fluid grids, container queries, and adaptive layouts that feel native on every screen, from 320px to ultrawide.',
-    anat_seo_title: 'SEO / ACCESSIBILITY',
-    anat_seo_desc: 'Structured data, semantic markup, WCAG 2.1 AA compliance, and performance-driven indexing strategies.',
-    term_tab_template: '[ 01 / TEMPLATE BLOAT ]',
-    term_tab_custom: '[ 02 / mas_ CUSTOM CODE ]',
-    term_status_template: 'STATUS: BLOATED / 4.2s / 86 REQS',
-    term_status_custom: 'STATUS: ENGINEERED / 50ms / 3 REQS',
-    term_note_template: '3.4 MB page weight. 82 unused stylesheets & blocking tracking scripts.',
-    term_note_custom: 'Zero unused bytes. 100/100 Lighthouse Performance. Pure semantic HTML5.',
+    mod2_title: 'SERVICES',
+    srv_thesis_tag: 'CREATIVE DIGITAL STUDIO',
+    srv_thesis_text: '<strong>mas_</strong> is a new-generation social media agency rooted in custom web engineering and bespoke software. We build your digital infrastructure from scratch and orchestrate your social media, video production, and advertising campaigns with single-minded visual coherence.',
+    tab_all: '[ 00 / ALL SERVICES ]',
+    tab_web: '[ 01 / WEB & SYSTEMS ]',
+    tab_social: '[ 02 / SOCIAL & ADS ]',
+    tab_prod: '[ 03 / VIDEO & PHOTO ]',
+    tab_threed: '[ 04 / 3D & MOTION ]',
+    tab_brand: '[ 05 / BRAND IDENTITY ]',
+    srv1_disc: 'WEB ARCHITECTURE & SOFTWARE',
+    srv1_title: 'Custom Web Design & Bespoke Admin Panel',
+    srv1_desc: 'No drag-and-drop templates or bloated plugins. We develop bespoke, lightning-fast, and SEO-engineered web platforms. Crucially, we build a <strong>tailored, clutter-free Admin Panel</strong> with only the buttons your team actually needs.',
+    admin_btn_front: 'Frontend Interface',
+    admin_btn_admin: 'Custom Admin Panel',
+    srv1_t1: 'Custom Web Design',
+    srv1_t2: 'UI / UX Design',
+    srv1_t3: 'Bespoke Admin Panel',
+    srv1_t4: 'Technical SEO Infrastructure',
+    srv2_disc: 'GROWTH & PERFORMANCE',
+    srv2_title: 'Social Media & Paid Ads Management',
+    srv2_desc: 'We don\u2019t burn ad budgets with random posting. Through holistic roadmaps and monthly content calendars, we define your brand\u2019s voice and direct Meta (Instagram/Facebook) & Google Ads budgets toward high-intent customers.',
+    srv2_t1: 'Social Media Management',
+    srv2_t2: 'Meta & Google Ads',
+    srv2_t3: 'Creative Strategy & Planning',
+    srv3_disc: 'CREATIVE PRODUCTION',
+    srv3_title: 'Video & Photography Production',
+    srv3_desc: 'Stock footage and synthetic imagery dilute your brand. Using cinema-grade equipment on location, in-studio, or on-field, we produce high-tempo Reels/TikTok videos and elevated lookbook photography that captivates audiences.',
+    srv3_t1: 'Video Production & Reels',
+    srv3_t2: 'Commercial Photography',
+    srv3_t3: 'Editing & Color Grading',
+    srv4_disc: '3D & MOTION DESIGN',
+    srv4_title: '3D Visualization & Animation Design',
+    srv4_desc: 'Standing out on web platforms and social feeds through high-impact 3D product renders, spatial modeling, and fluid kinetic motion graphics.',
+    srv4_t1: '3D Product Modeling',
+    srv4_t2: 'Motion Graphics',
+    srv4_t3: 'WebGL & Interaction',
+    srv4_t4: '3D Social Reels',
+    srv5_disc: 'ART DIRECTION',
+    srv5_title: 'Brand Identity & Visual Systems',
+    srv5_desc: 'Ensuring your website and social channels speak the exact same refined design language. From bespoke logo suites and typography pairing to color hierarchies and social feed guidelines, we build an unmistakable brand presence.',
+    srv5_t1: 'Brand Identity Creation',
+    srv5_t2: 'Logo & Typography Systems',
+    srv5_t3: 'Social Grid Guidelines',
+    mod3_title: 'INSIGHTS',
+    det1_title: 'Zero Bloat',
+    det1_desc: 'Every line of code is written with purpose. No unused CSS, no redundant JavaScript, no third-party overhead.',
+    det2_title: 'Total Ownership',
+    det2_desc: 'You own every asset, every component, and every line of code. No platform lock-in, no recurring platform fees.',
+    det3_title: 'Scalable Architecture',
+    det3_desc: 'Component-driven systems built to scale. Add features, pages, and integrations without rewriting your foundation.',
+    det4_title: 'Accessibility First',
+    det4_desc: 'Semantic markup, ARIA patterns, and keyboard navigation baked in from day one, not bolted on after launch.',
+    det5_title: 'SEO by Architecture',
+    det5_desc: 'Clean DOM, fast rendering, structured data, and server-side performance ensure search engines love your site.',
+    det6_title: 'High-Return Investment',
+    det6_desc: 'Unlike disposable templates, ground-up development represents a dedicated upfront investment that eliminates perpetual license fees and costly technical debt.',
+    det7_title: 'Considered Development Timeline',
+    det7_desc: 'Precision engineering cannot be rushed. Every viewport, interaction, and production asset is deliberately tested, optimized, and refined over dedicated production sprints.',
+    det8_title: 'Dedicated Technical Partnership',
+    det8_desc: 'We don\u2019t hand off and disappear. For ongoing platform extensions, high-traffic campaigns, and design iterations, we provide dedicated engineering support.',
     contact_label: 'READY TO BUILD?',
     contact_heading: 'LET\u2019S TALK<span class="blink-cursor">_</span>',
     card_hint: 'Click card to flip',
@@ -65,56 +83,75 @@ const translations = {
   },
   tr: {
     nav_services: 'HİZMETLER',
-    nav_why: 'NEDEN MAS?',
-    nav_process: 'SÜREÇ',
+    nav_why: 'NEDEN MAS ?',
     nav_insights: 'DETAYLAR',
     nav_contact: 'İLETİŞİM',
     hero_label: 'DİJİTAL AJANS — 2019\'DAN BERİ',
-    hero_scroll: 'AŞAĞI KAYDIR',
-    mod1_title: 'MODERN WEB VS. ŞABLONLAR',
+    mod1_title: 'NEDEN MAS ?',
     mod1_p1: 'Hazır şablonlarla yapılan siteler ucuza ve çabuk çıkar ama hep aynı kalıptan çıkmış gibi durur. Bir de arka tarafta kimsenin kullanmadığı bir sürü eklenti, gereksiz kod ve siteyi ağırlaştıran dosyalar yığılır. Kısacası, o site sizin değil. Herkesin sitesi.',
     mod1_p2: '<strong>mas_</strong> olarak biz işi farklı yapıyoruz. Her projeyi en baştan, tamamen sizin ihtiyaçlarınıza göre kodluyoruz. Gereksiz hiçbir şey yok. Ne fazla kod, ne yavaşlatan eklenti. Sadece sizin işinize yarayan, hızlı ve doğru çalışan bir site.',
     mod1_p3: 'Bugünün dünyasında bir site sadece güzel görünse yetmiyor. Hızlı açılması lazım, telefonda da düzgün çalışması lazım, Google\'da çıkması lazım, herkesin rahatça kullanabilmesi lazım. Bunları sürükle-bırak araçlarıyla yapmaya çalışmak... pek gerçekçi değil.',
     mod1_p4: 'Biz hazır temaları alıp üstünü değiştirmiyoruz. Sizin işinize özel, sıfırdan çözüm üretiyoruz. Sonuçta elinizde rakiplerden hızlı, Google\'da görünür ve işiniz büyüdükçe rahatça büyüyebilen bir site kalıyor.',
-    mod2_title: 'YAKINDAN BAKALIM: PERFORMANS',
-    mod2_m1: 'Lighthouse<br/>Performans',
-    mod2_m2: 'İlk Tepki<br/>Süresi',
-    mod2_m3: 'Sayfa Açılış<br/>Hızı',
-    mod2_m4: 'Görsel<br/>Kayma Oranı',
-    mod2_note: 'Her projemizi Google\'ın performans kriterlerine göre test ediyoruz. Tüm sonuçlar yeşil olmadan siteyi yayına almıyoruz.',
-    mod3_title: 'AVANTAJLAR',
-    adv1_title: 'Gereksiz Kod Yok',
-    adv1_desc: 'Yazdığımız her satırın bir sebebi var. Kullanılmayan dosya yok, gereksiz eklenti yok, siteyi yavaşlatan hiçbir şey yok.',
-    adv2_title: 'Her Şey Sizin',
-    adv2_desc: 'Sitenin tamamı size ait. Tasarımı, kodu, her şeyi. Hiçbir platforma bağımlı kalmazsınız, kimseye aylık ödeme yapmazsınız.',
-    adv3_title: 'Büyümeye Hazır',
-    adv3_desc: 'Siteyi parça parça, modüler kuruyoruz. İleride yeni sayfa veya özellik eklemek istediğinizde temeli bozmadan kolayca eklenebiliyor.',
-    adv4_title: 'Herkes Kullanabilsin',
-    adv4_desc: 'Erişilebilirlik sonradan eklenen bir şey değil, daha ilk günden sitenin yapısına dahil. Klavyeyle gezinme, ekran okuyucu desteği, doğru HTML yapısı hep hazır.',
-    adv5_title: 'Google Sizi Sevsin',
-    adv5_desc: 'Temiz kod, hızlı yüklenme, doğru yapılandırılmış veri. Arama motorlarının sitenizi bulup üst sıralara çıkarması için ne gerekiyorsa altyapıda var.',
-    mod4_title: 'DEZAVANTAJLAR',
-    dis1_title: 'Başlangıçta Daha Pahalı',
-    dis1_desc: 'Özel geliştirme, hazır şablona göre başta daha fazla bütçe ister. Ama uzun vadede çok daha avantajlı çıkıyor.',
-    dis2_title: 'Biraz Daha Zaman Alır',
-    dis2_desc: 'Kaliteli iş aceleye gelmez. Her detayı düşünüyor, test ediyor, ince ayar yapıyoruz. Bu yüzden birkaç gün değil birkaç hafta sürüyor.',
-    dis3_title: 'Teknik Destek Gerekebilir',
-    dis3_desc: 'İleride yapılacak güncellemeler ve eklemeler için teknik bilgi lazım. Ama merak etmeyin, biz uzun vadeli destek paketleriyle bu işi sizin için kolay hale getiriyoruz.',
-    anat_title: 'BİR WEB SAYFASININ ANATOMİSİ',
-    anat_perf_title: 'PERFORMANS',
-    anat_perf_desc: 'Sayfalarınız bir saniyenin altında açılır. Bunu akıllı kod bölme, gecikmeli yükleme ve önbellekleme ile sağlıyoruz.',
-    anat_ux_title: 'UX / UI',
-    anat_ux_desc: 'Araştırmaya dayalı arayüzler, akıcı geçişler ve her ekran boyutuna kusursuz uyan tasarımlar.',
-    anat_resp_title: 'DUYARLI',
-    anat_resp_desc: 'Siteniz telefonda da tablette de büyük ekranda da aynı kalitede görünür. Esnek yapısı sayesinde her cihaza doğal uyum sağlar.',
-    anat_seo_title: 'SEO / ERİŞİLEBİLİRLİK',
-    anat_seo_desc: 'Doğru HTML yapısı, yapılandırılmış veri ve hız odaklı altyapı ile arama motorlarında en iyi yerde olursunuz.',
-    term_tab_template: '[ 01 / ŞABLON YÜKÜ ]',
-    term_tab_custom: '[ 02 / mas_ ÖZEL KOD ]',
-    term_status_template: 'DURUM: YAVAŞ / 4.2sn / 86 İSTEK',
-    term_status_custom: 'DURUM: OPTİMİZE / 50ms / 3 İSTEK',
-    term_note_template: '3.4 MB sayfa boyutu. 82 kullanılmayan dosya ve engelleyici script.',
-    term_note_custom: 'Sıfır gereksiz kod. 100/100 Lighthouse puanı. Saf semantik HTML5.',
+    mod2_title: 'HİZMETLER',
+    srv_thesis_tag: 'KREATİF DİJİTAL STÜDYO',
+    srv_thesis_text: '<strong>mas_</strong>, web tasarım ve özel yazılım odaklı yeni nesil bir sosyal medya ajansıdır. Sitenizi şablonlara boğmadan sıfırdan inşa ediyor; sosyal medyanızı, video prodüksiyonunuzu ve dijital reklamlarınızı aynı seçkin dille yönetiyoruz.',
+    tab_all: '[ 00 / HEPSİ ]',
+    tab_web: '[ 01 / WEB & SİSTEM ]',
+    tab_social: '[ 02 / SOSYAL & REKLAM ]',
+    tab_prod: '[ 03 / VİDEO & FOTO ]',
+    tab_threed: '[ 04 / 3D & ANİMASYON ]',
+    tab_brand: '[ 05 / MARKA KİMLİĞİ ]',
+    srv1_disc: 'WEB MİMARİSİ & YAZILIM',
+    srv1_title: 'Özel Web Tasarımı & Size Özel Admin Paneli',
+    srv1_desc: 'Sürükle-bırak şablonlar veya şişkin eklentiler yok. Sıfırdan, markanıza özel, ultra hızlı ve SEO dostu web siteleri geliştiriyoruz. En önemlisi; sitenizi kimseye bağımlı olmadan kolayca yönetebilmeniz için sadece ihtiyacınız olan özelliklerden oluşan <strong>Size Özel Sade Bir Admin Paneli</strong> kodluyoruz.',
+    admin_btn_front: 'Web Arayüzü',
+    admin_btn_admin: 'Özel Yönetim Paneli',
+    srv1_t1: 'Özel Web Tasarımı',
+    srv1_t2: 'UI / UX Tasarım',
+    srv1_t3: 'Özel Admin Paneli',
+    srv1_t4: 'Teknik SEO Altyapısı',
+    srv2_disc: 'BÜYÜME & PERFORMANS',
+    srv2_title: 'Sosyal Medya & Reklam Yönetimi',
+    srv2_desc: 'Rastgele paylaşımlarla bütçe tüketmiyoruz. Genel planlama ve aylık içerik takvimleriyle markanızın sesini belirliyor; Meta (Instagram/Facebook) ve Google Ads reklamlarınızı doğrudan satışa ve nitelikli kitleye dönüştürüyoruz.',
+    srv2_t1: 'Sosyal Medya Yönetimi',
+    srv2_t2: 'Meta & Google Reklamları',
+    srv2_t3: 'Genel Planlama & Strateji',
+    srv3_disc: 'KREATİF PRODÜKSİYON',
+    srv3_title: 'Video & Fotoğraf Çekim Hizmeti',
+    srv3_desc: 'Stok video veya yapay görseller markanızı sıradanlaştırır. Profesyonel ekipmanlarla mekanınızda, stüdyoda veya sahada; sosyal medyada izleten yüksek tempolu Reels/TikTok videoları ve üst düzey marka fotoğraf çekimleri gerçekleştiriyoruz.',
+    srv3_t1: 'Video Çekimi & Reels',
+    srv3_t2: 'Fotoğraf Çekimi',
+    srv3_t3: 'Kurgu & Renk Tasarımı',
+    srv4_disc: '3D & ANİMASYON TASARIMI',
+    srv4_title: '3D Modelleme & Animasyon Tasarımı',
+    srv4_desc: 'Web sitenizde ve sosyal medya içeriklerinizde fark yaratan 3D ürün modellemeleri, mekanik görselleştirmeler ve akıcı motion grafikler. Sıradan görsellerin ötesine geçen dinamik üç boyutlu deneyimler.',
+    srv4_t1: '3D Ürün Modelleme',
+    srv4_t2: 'Motion Graphics',
+    srv4_t3: 'WebGL & Etkileşim',
+    srv4_t4: '3D Reels Animasyon',
+    srv5_disc: 'ART DIRECTION',
+    srv5_title: 'Marka Kimliği & Görsel Tasarım',
+    srv5_desc: 'Web siteniz ile Instagram akışınızın aynı seçkin dille konuşmasını sağlıyoruz. Logo tasarımı, tipografi seçimi, renk hiyerarşisi ve sosyal medya grid rehberleriyle markanızı rakiplerden net bir şekilde ayrıştırıyoruz.',
+    srv5_t1: 'Marka Kimliği Oluşturma',
+    srv5_t2: 'Logo & Tipografi Sistemi',
+    srv5_t3: 'Sosyal Medya Grid Kılavuzu',
+    mod3_title: 'DETAYLAR',
+    det1_title: 'Gereksiz Kod Yok',
+    det1_desc: 'Yazdığımız her satırın bir sebebi var. Kullanılmayan dosya yok, gereksiz eklenti yok, siteyi yavaşlatan hiçbir şey yok.',
+    det2_title: 'Her Şey Sizin',
+    det2_desc: 'Sitenin tamamı size ait. Tasarımı, kodu, her şeyi. Hiçbir platforma bağımlı kalmazsınız, kimseye lisans veya aylık ödeme yapmazsınız.',
+    det3_title: 'Büyümeye Hazır',
+    det3_desc: 'Siteyi modüler ve bileşen odaklı kuruyoruz. İleride yeni sayfa veya özellik eklemek istediğinizde temeli bozmadan kolayca büyütülebiliyor.',
+    det4_title: 'Herkes İçin Erişilebilirlik',
+    det4_desc: 'Erişilebilirlik sonradan eklenen bir yama değil, ilk günden sitenin omurgasıdır. Klavye navigasyonu, ekran okuyucu uyumu ve doğru semantik yapı hazırdır.',
+    det5_title: 'Mimari Seviyede SEO',
+    det5_desc: 'Temiz DOM ağacı, ultra hızlı ilk tepki süresi ve yapılandırılmış veri şemaları. Arama motorlarının sitenizi zirveye taşıması için teknik altyapı eksiksizdir.',
+    det6_title: 'Butik & Kalıcı Yatırım',
+    det6_desc: 'Hazır şablonların aksine, sıfırdan mimari geliştirme odaklı bir ilk yatırım gerektirir. Ancak aylık eklenti ve tekrarlanan yenileme maliyetlerini sıfırlayarak uzun vadede kazandırır.',
+    det7_title: 'Özenli Geliştirme Takvimi',
+    det7_desc: 'Aceleye getirilmiş şablonlar yerine; her ekranı, pikseli ve performans metriğini titizlikle test edip optimize ettiğimiz gerçek bir mühendislik ve prodüksiyon süreci yürütürüz.',
+    det8_title: 'Sürekli Teknik İş Ortaklığı',
+    det8_desc: 'Sitenizi teslim edip kaybolmuyoruz. İleride ihtiyaç duyacağınız yeni özellikler, periyodik optimizasyonlar ve teknik geliştirmeler için sürekli iş ortağınız olarak yanınızdayız.',
     contact_label: 'PROJENİZİ KONUŞALIM MI?',
     contact_heading: 'BİZE YAZIN<span class="blink-cursor">_</span>',
     card_hint: 'Döndürmek için kartvizite tıkla',
@@ -125,57 +162,6 @@ const translations = {
 };
 
 let currentLang = 'tr';
-let currentTerminalMode = 'custom';
-
-const terminalSnippets = {
-  template: `<!-- ❌ WordPress / Elementor / Wix Template Bloat -->
-<div class="elementor-widget-wrap elementor-element-9a8f7b">
-  <div class="vc_row wpb_row vc_row-fluid vc_custom_1629">
-    <script src="/wp-includes/js/jquery/jquery-migrate.min.js"></script>
-    <link rel="stylesheet" href="plugins/revslider/rs6.css">
-    <link rel="stylesheet" href="plugins/elementor/assets/css/frontend.min.css">
-    <!-- +82 unused stylesheets & blocking tracking scripts -->
-  </div>
-</div>
-<!-- 4.2s load time. 86 HTTP requests. 3.4 MB total page weight. -->`,
-  custom: `<!-- ✔ mas_ Engineered Architecture -->
-<header class="site-header glass-minimal">
-  <nav class="main-nav" aria-label="Primary Navigation">
-    <a href="#services" class="nav-link">SERVICES</a>
-    <a href="#why-mas" class="nav-link">PERFORMANCE</a>
-  </nav>
-</header>
-<!-- 50ms load time. 3 HTTP requests. 14 KB total page weight. -->`
-};
-
-function updateTerminalDisplay() {
-  const codeContent = document.getElementById('terminal-code-content');
-  const statusText = document.getElementById('terminal-status-text');
-  const dot = document.getElementById('terminal-dot');
-  const note = document.getElementById('terminal-note');
-  const dict = translations[currentLang];
-
-  if (!codeContent || !statusText || !dot || !note || !dict) return;
-
-  // Set code content
-  codeContent.textContent = terminalSnippets[currentTerminalMode] || terminalSnippets.custom;
-
-  // Set status text and dot state
-  if (currentTerminalMode === 'template') {
-    statusText.innerHTML = dict.term_status_template;
-    dot.className = 'status-dot template';
-    note.innerHTML = dict.term_note_template;
-  } else {
-    statusText.innerHTML = dict.term_status_custom;
-    dot.className = 'status-dot custom';
-    note.innerHTML = dict.term_note_custom;
-  }
-
-  // Update tabs active state
-  document.querySelectorAll('.terminal-tab').forEach(tab => {
-    tab.classList.toggle('active', tab.dataset.mode === currentTerminalMode);
-  });
-}
 
 function setLanguage(lang) {
   currentLang = lang;
@@ -194,9 +180,6 @@ function setLanguage(lang) {
 
   // Update html lang attribute
   document.documentElement.lang = lang === 'tr' ? 'tr' : 'en';
-
-  // Keep terminal updated in active language
-  updateTerminalDisplay();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -208,16 +191,79 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ---- Interactive Code Terminal ----
-  document.querySelectorAll('.terminal-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-      currentTerminalMode = tab.dataset.mode;
-      updateTerminalDisplay();
-    });
-  });
   // Set initial language to Turkish
   setLanguage('tr');
-  updateTerminalDisplay();
+
+  // ---- Services Bento Filter Tabs & Direct Jump ----
+  const filterTabs = document.querySelectorAll('.filter-tab');
+  const bentoCards = document.querySelectorAll('.bento-card');
+
+  filterTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      filterTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const target = tab.dataset.filter;
+
+      bentoCards.forEach(card => {
+        if (target === 'all' || card.dataset.category === target) {
+          card.classList.remove('is-dimmed');
+          card.classList.add('is-highlighted');
+        } else {
+          card.classList.add('is-dimmed');
+          card.classList.remove('is-highlighted');
+        }
+      });
+
+      // Jump directly to the target box or grid
+      if (target === 'all') {
+        const bentoGrid = document.getElementById('services-bento');
+        if (bentoGrid) {
+          bentoGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      } else {
+        const targetCard = document.querySelector(`.bento-card[data-category="${target}"]`);
+        if (targetCard) {
+          targetCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          targetCard.classList.remove('pulse-focus');
+          void targetCard.offsetWidth; // Reflow to restart animation
+          targetCard.classList.add('pulse-focus');
+        }
+      }
+    });
+  });
+
+  // ---- Admin Panel Mockup Widget Toggle ----
+  const viewBtns = document.querySelectorAll('.view-btn');
+  const modeFront = document.querySelector('.mode-front');
+  const modeAdmin = document.querySelector('.mode-admin');
+
+  viewBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      viewBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const view = btn.dataset.view;
+      if (modeFront && modeAdmin) {
+        modeFront.classList.toggle('active', view === 'front');
+        modeAdmin.classList.toggle('active', view === 'admin');
+      }
+    });
+  });
+
+  // ---- 3D Animation Widget Coordinates Tracking ----
+  const threedWidget = document.querySelector('.threed-widget');
+  const threedCoords = document.getElementById('threedCoords');
+  if (threedWidget && threedCoords) {
+    threedWidget.addEventListener('mousemove', (e) => {
+      const rect = threedWidget.getBoundingClientRect();
+      const x = Math.round(((e.clientX - rect.left) / rect.width) * 180 - 90);
+      const y = Math.round(((e.clientY - rect.top) / rect.height) * 180 - 90);
+      threedCoords.textContent = `X:${x}° Y:${y}° 60FPS`;
+    });
+    threedWidget.addEventListener('mouseleave', () => {
+      threedCoords.textContent = '60 FPS \u2022 GL_MESH';
+    });
+  }
 
   // ---- Scroll-based header hide/show ----
   const header = document.getElementById('site-header');
@@ -273,73 +319,18 @@ document.addEventListener('DOMContentLoaded', () => {
     moduleObserver.observe(mod);
   });
 
-  // Observe advantage list items
-  document.querySelectorAll('.advantage-list li').forEach((li, i) => {
-    li.style.transitionDelay = `${i * 0.08}s`;
-    moduleObserver.observe(li);
-  });
-
-  // Observe anatomy cards
-  document.querySelectorAll('.anatomy-card').forEach((card, i) => {
-    card.style.transitionDelay = `${i * 0.1}s`;
+  // Observe detail cards
+  document.querySelectorAll('.detail-card, .advantage-list li').forEach((card, i) => {
+    card.style.transitionDelay = `${i * 0.05}s`;
     moduleObserver.observe(card);
   });
 
-  // ---- Animated counter for performance numbers ----
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        animateCounter(entry.target);
-        counterObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.5 });
-
-  document.querySelectorAll('[data-count]').forEach(el => {
-    counterObserver.observe(el);
+  // Observe bento cards
+  document.querySelectorAll('.bento-card').forEach((card, i) => {
+    card.style.transitionDelay = `${i * 0.08}s`;
+    moduleObserver.observe(card);
   });
 
-  function animateCounter(el) {
-    const target = parseFloat(el.dataset.count);
-    const isDecimal = el.dataset.decimal === 'true';
-    const duration = 1200;
-    const start = performance.now();
-
-    function update(now) {
-      const elapsed = now - start;
-      const progress = Math.min(elapsed / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 4); // ease-out quart
-      const current = target * eased;
-
-      if (isDecimal) {
-        el.textContent = current.toFixed(1);
-      } else {
-        el.textContent = Math.round(current);
-      }
-
-      if (progress < 1) {
-        requestAnimationFrame(update);
-      }
-    }
-
-    requestAnimationFrame(update);
-  }
-
-  // ---- Meter fill animation ----
-  const meterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const fill = entry.target;
-        const pct = fill.dataset.fill;
-        fill.style.width = pct + '%';
-        meterObserver.unobserve(fill);
-      }
-    });
-  }, { threshold: 0.3 });
-
-  document.querySelectorAll('.meter-fill').forEach(el => {
-    meterObserver.observe(el);
-  });
 
   // ---- Active nav link on scroll ----
   const sections = document.querySelectorAll('[id]');

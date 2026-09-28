@@ -75,7 +75,7 @@
     type="image/svg+xml" />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=2.4" />
+  <link rel="stylesheet" href="style.css?v=2.5" />
 </head>
 
 <body>
@@ -86,9 +86,8 @@
 
       <nav class="main-nav" id="main-nav" aria-label="Primary navigation">
         <ul class="nav-list">
+          <li><a href="#why-mas" class="nav-link" data-nav data-i18n="nav_why">NEDEN MAS ?</a></li>
           <li><a href="#services" class="nav-link" data-nav data-i18n="nav_services">HİZMETLER</a></li>
-          <li><a href="#why-mas" class="nav-link" data-nav data-i18n="nav_why">NEDEN MAS?</a></li>
-          <li><a href="#process" class="nav-link" data-nav data-i18n="nav_process">SÜREÇ</a></li>
           <li><a href="#insights" class="nav-link" data-nav data-i18n="nav_insights">DETAYLAR</a></li>
           <li><a href="#contact" class="nav-link" data-nav data-i18n="nav_contact">İLETİŞİM</a></li>
         </ul>
@@ -201,18 +200,8 @@
       <div class="hero-inner">
         <h1 class="hero-title">
           <span class="hero-line" data-reveal>your vision</span>
-          <span class="hero-line" data-reveal>our code</span>
+          <span class="hero-line" data-reveal>our code<span class="blink-cursor">_</span></span>
         </h1>
-        <div class="hero-meta">
-          <span class="hero-scroll-hint">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <line x1="12" y1="5" x2="12" y2="19" />
-              <polyline points="19 12 12 19 5 12" />
-            </svg>
-            <span data-i18n="hero_scroll">AŞAĞI KAYDIR</span>
-          </span>
-          <span class="hero-index">001</span>
-        </div>
       </div>
     </section>
 
@@ -222,11 +211,11 @@
       <!-- ===== LEFT COLUMN ===== -->
       <div class="col-left">
 
-        <!-- MODULE: Modern Web vs Templates -->
-        <article class="module" id="services" data-module>
+        <!-- MODULE: Neden MAS ? -->
+        <article class="module" id="why-mas" data-module>
           <div class="module-header">
             <span class="module-index">01</span>
-            <h2 class="module-title" data-i18n="mod1_title">MODERN WEB VS. ŞABLONLAR</h2>
+            <h2 class="module-title" data-i18n="mod1_title">NEDEN MAS ?</h2>
           </div>
           <div class="module-body two-col-text">
             <div>
@@ -238,153 +227,336 @@
               <p data-i18n="mod1_p4">Biz hazır temaları alıp üstünü değiştirmiyoruz. Sizin işinize özel, sıfırdan çözüm üretiyoruz. Sonuçta elinizde rakiplerden hızlı, Google'da görünür ve işiniz büyüdükçe rahatça büyüyebilen bir site kalıyor.</p>
             </div>
           </div>
-
-          <!-- INTERACTIVE TERMINAL: TEMPLATE vs mas_ CODE -->
-          <div class="code-terminal" id="code-terminal">
-            <div class="terminal-header">
-              <div class="terminal-status">
-                <span class="status-dot custom" id="terminal-dot"></span>
-                <span class="status-text" id="terminal-status-text">STATUS: ENGINEERED / 50ms / 3 REQS</span>
-              </div>
-              <div class="terminal-tabs">
-                <button class="terminal-tab" data-mode="template" data-i18n="term_tab_template">[ 01 / ŞABLON KİRLİLİĞİ ]</button>
-                <button class="terminal-tab active" data-mode="custom" data-i18n="term_tab_custom">[ 02 / mas_ ÖZEL KOD ]</button>
-              </div>
-            </div>
-            <div class="terminal-code-area">
-              <pre><code id="terminal-code-content"></code></pre>
-            </div>
-            <div class="terminal-footer">
-              <span class="terminal-note" id="terminal-note" data-i18n="term_note_custom">Sıfır gereksiz veri. 100/100 Lighthouse Performans. Saf, semantik HTML5.</span>
-            </div>
-          </div>
         </article>
 
-        <!-- MODULE: Deep Dive — Performance -->
-        <article class="module" id="why-mas" data-module>
+        <!-- MODULE: Services -->
+        <article class="module" id="services" data-module>
           <div class="module-header">
             <span class="module-index">02</span>
-            <h2 class="module-title" data-i18n="mod2_title">
-              YAKINDAN BAKALIM: PERFORMANS
-              <span class="inline-icons">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10" />
-                  <polyline points="12 6 12 12 16 14" />
-                </svg>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-                </svg>
-              </span>
-            </h2>
+            <h2 class="module-title" data-i18n="mod2_title">HİZMETLER</h2>
           </div>
+
           <div class="module-body">
-            <div class="perf-grid">
-              <div class="perf-card" data-module>
-                <div class="perf-metric">
-                  <span class="perf-number" data-count="98">0</span>
-                </div>
-                <div class="perf-label" data-i18n="mod2_m1">Lighthouse<br />Performans</div>
+
+            <!-- Agency Thesis & Filter Bar -->
+            <div class="services-header-box">
+              <div class="agency-thesis">
+                <span class="thesis-pill">
+                  <span class="pulse-indicator"></span>
+                  <span data-i18n="srv_thesis_tag">KREATİF DİJİTAL STÜDYO</span>
+                </span>
+                <p class="thesis-text" data-i18n="srv_thesis_text">
+                  <strong>mas_</strong>, web tasarım ve özel yazılım odaklı yeni nesil bir sosyal medya ajansıdır. Sitenizi şablonlara boğmadan sıfırdan inşa ediyor; sosyal medyanızı, video prodüksiyonunuzu ve dijital reklamlarınızı aynı seçkin dille yönetiyoruz.
+                </p>
               </div>
-              <div class="perf-card" data-module>
-                <div class="perf-metric">
-                  <span class="perf-number" data-count="50">0</span><span class="perf-unit">ms</span>
-                </div>
-                <div class="perf-label" data-i18n="mod2_m2">İlk Tepki<br />Süresi</div>
-              </div>
-              <div class="perf-card" data-module>
-                <div class="perf-metric">
-                  <span class="perf-number" data-count="0.8" data-decimal="true">0</span><span
-                    class="perf-unit">s</span>
-                </div>
-                <div class="perf-label" data-i18n="mod2_m3">Sayfa Açılış<br />Hızı</div>
-              </div>
-              <div class="perf-card" data-module>
-                <div class="perf-metric">
-                  <span class="perf-number" data-count="0">0</span>
-                </div>
-                <div class="perf-label" data-i18n="mod2_m4">Görsel<br />Kayma Oranı</div>
+
+              <!-- Interactive Category Tabs -->
+              <div class="services-filter-nav" role="tablist">
+                <button class="filter-tab active" data-filter="all" data-i18n="tab_all">[ 00 / HEPSİ ]</button>
+                <button class="filter-tab" data-filter="web" data-i18n="tab_web">[ 01 / WEB & SİSTEM ]</button>
+                <button class="filter-tab" data-filter="social" data-i18n="tab_social">[ 02 / SOSYAL & REKLAM ]</button>
+                <button class="filter-tab" data-filter="production" data-i18n="tab_prod">[ 03 / VİDEO & FOTO ]</button>
+                <button class="filter-tab" data-filter="threed" data-i18n="tab_threed">[ 04 / 3D & ANİMASYON ]</button>
+                <button class="filter-tab" data-filter="brand" data-i18n="tab_brand">[ 05 / MARKA KİMLİĞİ ]</button>
               </div>
             </div>
-            <p class="module-note" data-i18n="mod2_note">Her projemizi Google'ın performans kriterlerine göre test ediyoruz. Tüm sonuçlar yeşil olmadan siteyi yayına almıyoruz.</p>
+
+            <!-- Bento Services Grid -->
+            <div class="services-bento" id="services-bento">
+
+              <!-- CARD 01: WEB & ÖZEL ADMİN PANELİ (Featured) -->
+              <div class="bento-card bento-card--featured" data-category="web" data-module>
+                <div class="bento-top">
+                  <div class="bento-meta">
+                    <span class="bento-index">[ 02.1 ]</span>
+                    <span class="bento-discipline" data-i18n="srv1_disc">WEB MİMARİSİ & YAZILIM</span>
+                  </div>
+                  <span class="bento-arrow">↗</span>
+                </div>
+
+                <div class="bento-main">
+                  <h3 class="bento-title" data-i18n="srv1_title">Özel Web Tasarımı & Size Özel Admin Paneli</h3>
+                  <p class="bento-desc" data-i18n="srv1_desc">
+                    Sürükle-bırak şablonlar veya şişkin eklentiler yok. Sıfırdan, markanıza özel, ultra hızlı ve SEO dostu web siteleri geliştiriyoruz. En önemlisi; sitenizi kimseye bağımlı olmadan kolayca yönetebilmeniz için sadece ihtiyacınız olan özelliklerden oluşan <strong>Size Özel Sade Bir Admin Paneli</strong> kodluyoruz.
+                  </p>
+                </div>
+
+                <!-- Interactive Admin Panel Mockup Widget -->
+                <div class="bento-interactive-widget admin-widget">
+                  <div class="widget-header">
+                    <div class="widget-dots"><span></span><span></span><span></span></div>
+                    <span class="widget-title">mas_ bespoke admin system // v2.6</span>
+                    <div class="admin-view-toggle">
+                      <button class="view-btn active" data-view="front" data-i18n="admin_btn_front">Web Arayüzü</button>
+                      <button class="view-btn" data-view="admin" data-i18n="admin_btn_admin">Özel Yönetim Paneli</button>
+                    </div>
+                  </div>
+                  <div class="widget-display" id="adminWidgetDisplay">
+                    <div class="widget-mode-content mode-front active">
+                      <div class="mock-row">
+                        <span class="mock-badge">100/100 LIGHTHOUSE</span>
+                        <span class="mock-label">0 Eklenti Fazlalığı &bull; Sub-Second Hız &bull; Tam Mobil Uyum</span>
+                      </div>
+                    </div>
+                    <div class="widget-mode-content mode-admin">
+                      <div class="mock-row">
+                        <span class="mock-badge mock-badge--accent">SADELEŞTİRİLMİŞ PANEL</span>
+                        <span class="mock-label">İçerikleri Tek Tıkla Güncelle &bull; SEO Parametreleri &bull; Sıfır Kod Bilgisi</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bento-tags">
+                  <span class="bento-tag" data-i18n="srv1_t1">Özel Web Tasarımı</span>
+                  <span class="bento-tag" data-i18n="srv1_t2">UI / UX Tasarım</span>
+                  <span class="bento-tag" data-i18n="srv1_t3">Özel Admin Paneli</span>
+                  <span class="bento-tag" data-i18n="srv1_t4">Teknik SEO Altyapısı</span>
+                </div>
+              </div>
+
+              <!-- CARD 02: SOSYAL MEDYA & REKLAM YÖNETİMİ -->
+              <div class="bento-card" data-category="social" data-module>
+                <div class="bento-top">
+                  <div class="bento-meta">
+                    <span class="bento-index">[ 02.2 ]</span>
+                    <span class="bento-discipline" data-i18n="srv2_disc">BÜYÜME & PERFORMANS</span>
+                  </div>
+                  <span class="bento-arrow">↗</span>
+                </div>
+
+                <div class="bento-main">
+                  <h3 class="bento-title" data-i18n="srv2_title">Sosyal Medya & Reklam Yönetimi</h3>
+                  <p class="bento-desc" data-i18n="srv2_desc">
+                    Rastgele paylaşımlarla bütçe tüketmiyoruz. Genel planlama ve aylık içerik takvimleriyle markanızın sesini belirliyor; Meta (Instagram/Facebook) ve Google Ads reklamlarınızı doğrudan satışa ve nitelikli kitleye dönüştürüyoruz.
+                  </p>
+                </div>
+
+                <!-- Campaign & Strategy Metric Widget -->
+                <div class="bento-interactive-widget strategy-widget">
+                  <div class="strategy-row">
+                    <span class="strategy-channel">META ADS &bull; GOOGLE ADS</span>
+                    <span class="strategy-status">OPTİMİZE / ROI ODAKLI</span>
+                  </div>
+                  <div class="strategy-bar">
+                    <div class="strategy-bar-segment seg-1" style="width: 45%;" title="Meta Ads"></div>
+                    <div class="strategy-bar-segment seg-2" style="width: 35%;" title="Google Ads"></div>
+                    <div class="strategy-bar-segment seg-3" style="width: 20%;" title="Organik Büyüme"></div>
+                  </div>
+                  <div class="strategy-footer">
+                    <span>Aylık İçerik Takvimi</span>
+                    <span>Haftalık Raporlama</span>
+                  </div>
+                </div>
+
+                <div class="bento-tags">
+                  <span class="bento-tag" data-i18n="srv2_t1">Sosyal Medya Yönetimi</span>
+                  <span class="bento-tag" data-i18n="srv2_t2">Meta & Google Reklamları</span>
+                  <span class="bento-tag" data-i18n="srv2_t3">Genel Planlama & Strateji</span>
+                </div>
+              </div>
+
+              <!-- CARD 03: VİDEO & FOTOĞRAF PRODÜKSİYONU -->
+              <div class="bento-card" data-category="production" data-module>
+                <div class="bento-top">
+                  <div class="bento-meta">
+                    <span class="bento-index">[ 02.3 ]</span>
+                    <span class="bento-discipline" data-i18n="srv3_disc">KREATİF PRODÜKSİYON</span>
+                  </div>
+                  <span class="bento-arrow">↗</span>
+                </div>
+
+                <div class="bento-main">
+                  <h3 class="bento-title" data-i18n="srv3_title">Video & Fotoğraf Çekim Hizmeti</h3>
+                  <p class="bento-desc" data-i18n="srv3_desc">
+                    Stok video veya yapay görseller markanızı sıradanlaştırır. Profesyonel ekipmanlarla mekanınızda, stüdyoda veya sahada; sosyal medyada izleten yüksek tempolu Reels/TikTok videoları ve üst düzey marka fotoğraf çekimleri gerçekleştiriyoruz.
+                  </p>
+                </div>
+
+                <!-- Viewfinder Production Widget -->
+                <div class="bento-interactive-widget viewfinder-widget">
+                  <div class="viewfinder-header">
+                    <span class="rec-badge"><span class="rec-dot"></span>REC</span>
+                    <span class="viewfinder-spec">4K UHD &bull; 9:16 VERTICAL &bull; 24FPS</span>
+                  </div>
+                  <div class="viewfinder-crosshair">
+                    <span class="vh-corner tl"></span>
+                    <span class="vh-corner tr"></span>
+                    <span class="vh-cross">+</span>
+                    <span class="vh-corner bl"></span>
+                    <span class="vh-corner br"></span>
+                  </div>
+                  <div class="viewfinder-footer">
+                    <span>STUDIO & FIELD PRODUCTION</span>
+                    <span>COLOR & SOUND EDIT</span>
+                  </div>
+                </div>
+
+                <div class="bento-tags">
+                  <span class="bento-tag" data-i18n="srv3_t1">Video Çekimi & Reels</span>
+                  <span class="bento-tag" data-i18n="srv3_t2">Fotoğraf Çekimi</span>
+                  <span class="bento-tag" data-i18n="srv3_t3">Kurgu & Renk Tasarımı</span>
+                </div>
+              </div>
+
+              <!-- CARD 04: 3D & ANİMASYON TASARIMI -->
+              <div class="bento-card" data-category="threed" data-module>
+                <div class="bento-top">
+                  <div class="bento-meta">
+                    <span class="bento-index">[ 02.4 ]</span>
+                    <span class="bento-discipline" data-i18n="srv4_disc">3D & MOTION DESIGN</span>
+                  </div>
+                  <span class="bento-arrow">↗</span>
+                </div>
+
+                <div class="bento-main">
+                  <h3 class="bento-title" data-i18n="srv4_title">3D Modelleme & Animasyon Tasarımı</h3>
+                  <p class="bento-desc" data-i18n="srv4_desc">
+                    Web sitenizde ve sosyal medya içeriklerinizde fark yaratan 3D ürün modellemeleri, mekanik görselleştirmeler ve akıcı motion grafikler. Sıradan görsellerin ötesine geçen dinamik üç boyutlu deneyimler.
+                  </p>
+                </div>
+
+                <!-- 3D Kinetic Wireframe Animation Widget -->
+                <div class="bento-interactive-widget threed-widget">
+                  <div class="threed-hud-header">
+                    <span class="threed-badge"><span class="threed-dot"></span>RENDER: 3D REALTIME</span>
+                    <span class="threed-coords" id="threedCoords">60 FPS &bull; GL_MESH</span>
+                  </div>
+                  <div class="threed-stage">
+                    <div class="threed-cube" id="threedCube">
+                      <div class="cube-face front"></div>
+                      <div class="cube-face back"></div>
+                      <div class="cube-face right"></div>
+                      <div class="cube-face left"></div>
+                      <div class="cube-face top"></div>
+                      <div class="cube-face bottom"></div>
+                    </div>
+                  </div>
+                  <div class="threed-hud-footer">
+                    <span>SPATIAL MODELING</span>
+                    <span>KINETIC MOTION</span>
+                  </div>
+                </div>
+
+                <div class="bento-tags">
+                  <span class="bento-tag" data-i18n="srv4_t1">3D Ürün Modelleme</span>
+                  <span class="bento-tag" data-i18n="srv4_t2">Motion Graphics</span>
+                  <span class="bento-tag" data-i18n="srv4_t3">WebGL & Etkileşim</span>
+                  <span class="bento-tag" data-i18n="srv4_t4">3D Reels Animasyon</span>
+                </div>
+              </div>
+
+              <!-- CARD 05: MARKA KİMLİĞİ OLUŞTURMA -->
+              <div class="bento-card" data-category="brand" data-module>
+                <div class="bento-top">
+                  <div class="bento-meta">
+                    <span class="bento-index">[ 02.5 ]</span>
+                    <span class="bento-discipline" data-i18n="srv5_disc">ART DIRECTION</span>
+                  </div>
+                  <span class="bento-arrow">↗</span>
+                </div>
+
+                <div class="bento-main">
+                  <h3 class="bento-title" data-i18n="srv5_title">Marka Kimliği & Görsel Tasarım</h3>
+                  <p class="bento-desc" data-i18n="srv5_desc">
+                    Web siteniz ile Instagram akışınızın aynı seçkin dille konuşmasını sağlıyoruz. Logo tasarımı, tipografi seçimi, renk hiyerarşisi ve sosyal medya grid rehberleriyle markanızı rakiplerden net bir şekilde ayrıştırıyoruz.
+                  </p>
+                </div>
+
+                <!-- Swatch & Typography Specimen Widget -->
+                <div class="bento-interactive-widget branding-widget">
+                  <div class="brand-tokens">
+                    <div class="token-colors">
+                      <span class="token-swatch sw-white" title="#FFFFFF"></span>
+                      <span class="token-swatch sw-gray" title="#888888"></span>
+                      <span class="token-swatch sw-dark" title="#222222"></span>
+                      <span class="token-swatch sw-black" title="#000000"></span>
+                    </div>
+                    <span class="token-font">SWISS TYPOGRAPHY &bull; 8PX GRID</span>
+                  </div>
+                  <div class="brand-guideline-bar">
+                    <span>LOGO REHBERİ</span>
+                    <span>&bull;</span>
+                    <span>RENK SİSTEMİ</span>
+                    <span>&bull;</span>
+                    <span>GRID ŞABLONLARI</span>
+                  </div>
+                </div>
+
+                <div class="bento-tags">
+                  <span class="bento-tag" data-i18n="srv5_t1">Marka Kimliği Oluşturma</span>
+                  <span class="bento-tag" data-i18n="srv5_t2">Logo & Tipografi Sistemi</span>
+                  <span class="bento-tag" data-i18n="srv5_t3">Sosyal Medya Grid Kılavuzu</span>
+                </div>
+              </div>
+
+            </div>
+
           </div>
         </article>
 
-        <!-- MODULE: Advantages -->
-        <article class="module" id="process" data-module>
-          <div class="module-header">
-            <span class="module-index">03</span>
-            <h2 class="module-title" data-i18n="mod3_title">AVANTAJLAR</h2>
-          </div>
-          <div class="module-body">
-            <ul class="advantage-list">
-              <li data-module>
-                <span class="adv-marker">+</span>
-                <div>
-                  <strong data-i18n="adv1_title">Gereksiz Kod Yok</strong>
-                  <p data-i18n="adv1_desc">Yazdığımız her satırın bir sebebi var. Kullanılmayan dosya yok, gereksiz eklenti yok, siteyi yavaşlatan hiçbir şey yok.</p>
-                </div>
-              </li>
-              <li data-module>
-                <span class="adv-marker">+</span>
-                <div>
-                  <strong data-i18n="adv2_title">Her Şey Sizin</strong>
-                  <p data-i18n="adv2_desc">Sitenin tamamı size ait. Tasarımı, kodu, her şeyi. Hiçbir platforma bağımlı kalmazsınız, kimseye aylık ödeme yapmazsınız.</p>
-                </div>
-              </li>
-              <li data-module>
-                <span class="adv-marker">+</span>
-                <div>
-                  <strong data-i18n="adv3_title">Büyümeye Hazır</strong>
-                  <p data-i18n="adv3_desc">Siteyi parça parça, modüler kuruyoruz. İleride yeni sayfa veya özellik eklemek istediğinizde temeli bozmadan kolayca eklenebiliyor.</p>
-                </div>
-              </li>
-              <li data-module>
-                <span class="adv-marker">+</span>
-                <div>
-                  <strong data-i18n="adv4_title">Herkes Kullanabilsin</strong>
-                  <p data-i18n="adv4_desc">Erişilebilirlik sonradan eklenen bir şey değil, daha ilk günden sitenin yapısına dahil. Klavyeyle gezinme, ekran okuyucu desteği, doğru HTML yapısı hep hazır.</p>
-                </div>
-              </li>
-              <li data-module>
-                <span class="adv-marker">+</span>
-                <div>
-                  <strong data-i18n="adv5_title">Google Sizi Sevsin</strong>
-                  <p data-i18n="adv5_desc">Temiz kod, hızlı yüklenme, doğru yapılandırılmış veri. Arama motorlarının sitenizi bulup üst sıralara çıkarması için ne gerekiyorsa altyapıda var.</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </article>
-
-        <!-- MODULE: Disadvantages -->
+        <!-- MODULE: Details / Insights -->
         <article class="module" id="insights" data-module>
           <div class="module-header">
-            <span class="module-index">04</span>
-            <h2 class="module-title" data-i18n="mod4_title">DEZAVANTAJLAR</h2>
+            <span class="module-index">03</span>
+            <h2 class="module-title" data-i18n="mod3_title">DETAYLAR</h2>
           </div>
           <div class="module-body">
-            <ul class="advantage-list disadvantage-list">
-              <li data-module>
-                <span class="adv-marker">−</span>
-                <div>
-                  <strong data-i18n="dis1_title">Başlangıçta Daha Pahalı</strong>
-                  <p data-i18n="dis1_desc">Özel geliştirme, hazır şablona göre başta daha fazla bütçe ister. Ama uzun vadede çok daha avantajlı çıkıyor.</p>
+            <ul class="details-grid">
+              <li class="detail-card" data-module>
+                <span class="detail-num">01</span>
+                <div class="detail-content">
+                  <strong data-i18n="det1_title">Gereksiz Kod Yok</strong>
+                  <p data-i18n="det1_desc">Yazdığımız her satırın bir sebebi var. Kullanılmayan dosya yok, gereksiz eklenti yok, siteyi yavaşlatan hiçbir şey yok.</p>
                 </div>
               </li>
-              <li data-module>
-                <span class="adv-marker">−</span>
-                <div>
-                  <strong data-i18n="dis2_title">Biraz Daha Zaman Alır</strong>
-                  <p data-i18n="dis2_desc">Kaliteli iş aceleye gelmez. Her detayı düşünüyor, test ediyor, ince ayar yapıyoruz. Bu yüzden birkaç gün değil birkaç hafta sürüyor.</p>
+              <li class="detail-card" data-module>
+                <span class="detail-num">02</span>
+                <div class="detail-content">
+                  <strong data-i18n="det2_title">Her Şey Sizin</strong>
+                  <p data-i18n="det2_desc">Sitenin tamamı size ait. Tasarımı, kodu, her şeyi. Hiçbir platforma bağımlı kalmazsınız, kimseye lisans veya aylık ödeme yapmazsınız.</p>
                 </div>
               </li>
-              <li data-module>
-                <span class="adv-marker">−</span>
-                <div>
-                  <strong data-i18n="dis3_title">Teknik Destek Gerekebilir</strong>
-                  <p data-i18n="dis3_desc">İleride yapılacak güncellemeler ve eklemeler için teknik bilgi lazım. Ama merak etmeyin, biz uzun vadeli destek paketleriyle bu işi sizin için kolay hale getiriyoruz.</p>
+              <li class="detail-card" data-module>
+                <span class="detail-num">03</span>
+                <div class="detail-content">
+                  <strong data-i18n="det3_title">Büyümeye Hazır</strong>
+                  <p data-i18n="det3_desc">Siteyi modüler ve bileşen odaklı kuruyoruz. İleride yeni sayfa veya özellik eklemek istediğinizde temeli bozmadan kolayca büyütülebiliyor.</p>
+                </div>
+              </li>
+              <li class="detail-card" data-module>
+                <span class="detail-num">04</span>
+                <div class="detail-content">
+                  <strong data-i18n="det4_title">Herkes İçin Erişilebilirlik</strong>
+                  <p data-i18n="det4_desc">Erişilebilirlik sonradan eklenen bir yama değil, ilk günden sitenin omurgasıdır. Klavye navigasyonu, ekran okuyucu uyumu ve doğru semantik yapı hazırdır.</p>
+                </div>
+              </li>
+              <li class="detail-card" data-module>
+                <span class="detail-num">05</span>
+                <div class="detail-content">
+                  <strong data-i18n="det5_title">Mimari Seviyede SEO</strong>
+                  <p data-i18n="det5_desc">Temiz DOM ağacı, ultra hızlı ilk tepki süresi ve yapılandırılmış veri şemaları. Arama motorlarının sitenizi zirveye taşıması için teknik altyapı eksiksizdir.</p>
+                </div>
+              </li>
+              <li class="detail-card" data-module>
+                <span class="detail-num">06</span>
+                <div class="detail-content">
+                  <strong data-i18n="det6_title">Butik &amp; Kalıcı Yatırım</strong>
+                  <p data-i18n="det6_desc">Hazır şablonların aksine, sıfırdan mimari geliştirme odaklı bir ilk yatırım gerektirir. Ancak aylık eklenti ve tekrarlanan yenileme maliyetlerini sıfırlayarak uzun vadede kazandırır.</p>
+                </div>
+              </li>
+              <li class="detail-card" data-module>
+                <span class="detail-num">07</span>
+                <div class="detail-content">
+                  <strong data-i18n="det7_title">Özenli Geliştirme Takvimi</strong>
+                  <p data-i18n="det7_desc">Aceleye getirilmiş şablonlar yerine; her ekranı, pikseli ve performans metriğini titizlikle test edip optimize ettiğimiz gerçek bir mühendislik ve prodüksiyon süreci yürütürüz.</p>
+                </div>
+              </li>
+              <li class="detail-card" data-module>
+                <span class="detail-num">08</span>
+                <div class="detail-content">
+                  <strong data-i18n="det8_title">Sürekli Teknik İş Ortaklığı</strong>
+                  <p data-i18n="det8_desc">Sitenizi teslim edip kaybolmuyoruz. İleride ihtiyaç duyacağınız yeni özellikler, periyodik optimizasyonlar ve teknik geliştirmeler için sürekli iş ortağınız olarak yanınızdayız.</p>
                 </div>
               </li>
             </ul>
@@ -393,155 +565,6 @@
 
       </div>
 
-      <!-- ===== RIGHT COLUMN ===== -->
-      <div class="col-right">
-
-        <article class="module anatomy-module" id="portfolio" data-module>
-          <div class="module-header">
-            <span class="module-index">∎</span>
-            <h2 class="module-title" data-i18n="anat_title">BİR WEB SAYFASININ ANATOMİSİ</h2>
-          </div>
-          <div class="module-body">
-
-            <!-- Anatomy Diagram -->
-            <div class="anatomy-diagram">
-
-              <!-- Browser chrome -->
-              <div class="anatomy-browser" data-module>
-                <div class="browser-dots">
-                  <span></span><span></span><span></span>
-                </div>
-                <div class="browser-url">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <rect x="3" y="11" width="18" height="11" rx="2" />
-                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                  </svg>
-                  <span>https://your-project.mas.dev</span>
-                </div>
-              </div>
-
-              <!-- Page wireframe -->
-              <div class="anatomy-page">
-                <div class="anat-section anat-header" data-module>
-                  <div class="anat-block-label">HEADER / NAV</div>
-                  <div class="anat-placeholder-bar"></div>
-                  <div class="anat-placeholder-dots">
-                    <span></span><span></span><span></span><span></span>
-                  </div>
-                </div>
-                <div class="anat-section anat-hero" data-module>
-                  <div class="anat-block-label">HERO</div>
-                  <div class="anat-hero-lines">
-                    <div class="anat-line anat-line--lg"></div>
-                    <div class="anat-line anat-line--md"></div>
-                    <div class="anat-line anat-line--sm"></div>
-                  </div>
-                </div>
-                <div class="anat-section anat-content" data-module>
-                  <div class="anat-block-label">CONTENT</div>
-                  <div class="anat-content-grid">
-                    <div class="anat-card"></div>
-                    <div class="anat-card"></div>
-                    <div class="anat-card"></div>
-                  </div>
-                </div>
-                <div class="anat-section anat-footer" data-module>
-                  <div class="anat-block-label">FOOTER</div>
-                  <div class="anat-placeholder-bar anat-placeholder-bar--short"></div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Anatomy Detail Cards -->
-            <div class="anatomy-details">
-
-              <div class="anatomy-card" data-module>
-                <div class="anatomy-card-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-                  </svg>
-                </div>
-                <h3 data-i18n="anat_perf_title">PERFORMANS</h3>
-                <p data-i18n="anat_perf_desc">Sayfalarınız bir saniyenin altında açılır. Bunu akıllı kod bölme, gecikmeli yükleme ve önbellekleme ile sağlıyoruz.</p>
-                <div class="anatomy-card-meter">
-                  <div class="meter-track">
-                    <div class="meter-fill" data-fill="96"></div>
-                  </div>
-                  <span class="meter-value">96 / 100</span>
-                </div>
-              </div>
-
-              <div class="anatomy-card" data-module>
-                <div class="anatomy-card-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="3" width="7" height="7" />
-                    <rect x="14" y="3" width="7" height="7" />
-                    <rect x="14" y="14" width="7" height="7" />
-                    <rect x="3" y="14" width="7" height="7" />
-                  </svg>
-                </div>
-                <h3 data-i18n="anat_ux_title">UX / UI</h3>
-                <p data-i18n="anat_ux_desc">Araştırmaya dayalı arayüzler, akıcı geçişler ve her ekran boyutuna kusursuz uyan tasarımlar.</p>
-                <div class="anatomy-card-tags">
-                  <span class="tag">Figma → Code</span>
-                  <span class="tag">Motion</span>
-                  <span class="tag">A/B Testing</span>
-                </div>
-              </div>
-
-              <div class="anatomy-card" data-module>
-                <div class="anatomy-card-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <!-- Desktop -->
-                    <rect x="2" y="3" width="20" height="14" rx="2" />
-                    <line x1="8" y1="21" x2="16" y2="21" />
-                    <line x1="12" y1="17" x2="12" y2="21" />
-                  </svg>
-                  <svg width="14" height="24" viewBox="0 0 14 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                    stroke-linecap="round" stroke-linejoin="round" class="icon-phone">
-                    <rect x="1" y="1" width="12" height="22" rx="2" />
-                    <line x1="5" y1="19" x2="9" y2="19" />
-                  </svg>
-                </div>
-                <h3 data-i18n="anat_resp_title">DUYARLI</h3>
-                <p data-i18n="anat_resp_desc">Siteniz telefonda da tablette de büyük ekranda da aynı kalitede görünür. Esnek yapısı sayesinde her cihaza doğal uyum sağlar.</p>
-                <div class="anatomy-card-breakpoints">
-                  <div class="bp"><span class="bp-label">SM</span><span class="bp-val">640</span></div>
-                  <div class="bp"><span class="bp-label">MD</span><span class="bp-val">768</span></div>
-                  <div class="bp"><span class="bp-label">LG</span><span class="bp-val">1024</span></div>
-                  <div class="bp"><span class="bp-label">XL</span><span class="bp-val">1280</span></div>
-                  <div class="bp"><span class="bp-label">2XL</span><span class="bp-val">1536</span></div>
-                </div>
-              </div>
-
-              <div class="anatomy-card" data-module>
-                <div class="anatomy-card-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10" />
-                    <line x1="2" y1="12" x2="22" y2="12" />
-                    <path
-                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                  </svg>
-                </div>
-                <h3 data-i18n="anat_seo_title">SEO / ERİŞİLEBİLİRLİK</h3>
-                <p data-i18n="anat_seo_desc">Doğru HTML yapısı, yapılandırılmış veri ve hız odaklı altyapı ile arama motorlarında en iyi yerde olursunuz.</p>
-                <div class="anatomy-card-checklist">
-                  <div class="check-item"><span class="check-icon">✓</span> Schema.org Markup</div>
-                  <div class="check-item"><span class="check-icon">✓</span> ARIA Landmarks</div>
-                  <div class="check-item"><span class="check-icon">✓</span> Alt Text Pipeline</div>
-                  <div class="check-item"><span class="check-icon">✓</span> Sitemap + Robots</div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </article>
-
-      </div>
     </div>
 
     <!-- CONTACT STRIP -->
