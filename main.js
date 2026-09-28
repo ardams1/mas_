@@ -58,6 +58,8 @@ const translations = {
     term_note_custom: 'Zero unused bytes. 100/100 Lighthouse Performance. Pure semantic HTML5.',
     contact_label: 'READY TO BUILD?',
     contact_heading: 'LET\u2019S TALK<span class="blink-cursor">_</span>',
+    card_hint: 'Click card to flip',
+    lanyard_hint: 'DRAG &bull; FLIP',
     footer_copy: '© 2026 mas_. All rights reserved.',
     footer_craft: 'Crafted with precision.'
   },
@@ -115,6 +117,8 @@ const translations = {
     term_note_custom: 'Sıfır gereksiz kod. 100/100 Lighthouse puanı. Saf semantik HTML5.',
     contact_label: 'PROJENİZİ KONUŞALIM MI?',
     contact_heading: 'BİZE YAZIN<span class="blink-cursor">_</span>',
+    card_hint: 'Döndürmek için kartvizite tıkla',
+    lanyard_hint: 'ÇEK &bull; DÖNDÜR',
     footer_copy: '© 2026 mas_. Tüm hakları saklıdır.',
     footer_craft: 'Titizlikle üretildi.'
   }
@@ -372,6 +376,285 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       } catch (err) {}
     });
+  });
+
+  // ============================================
+  // INTERACTIVE 3D LANYARD BADGE (REALISTIC PHYSICS)
+  // ============================================
+  const lanyardSwing = document.getElementById('lanyardSwing');
+  const lanyardOrigin = document.getElementById('lanyardOrigin');
+  const lanyardCard = document.getElementById('lanyardCard');
+  const lanyardCardInner = document.getElementById('lanyardCardInner');
+  const lanyardHint = document.getElementById('lanyardHint');
+  const lanyardWrapper = document.getElementById('lanyardWrapper');
+
+  if (lanyardSwing && lanyardOrigin && lanyardCard && lanyardCardInner) {
+    // ── State ──
+    let angle = 0;               // Current swing angle (degrees, NOT radians)
+    let angularVel = 0;          // Angular velocity (degrees/frame)
+    let yOffset = -350;          // Start high above for gentle drop
+    let yVel = 0;                // Vertical velocity
+    let isDropSettled = false;
+    let isDragging = false;
+    let hasMoved = false;
+    let dragStartX = 0;
+    let dragBaseAngle = 0;       // Angle at the moment drag began
+    let lastDragX = 0;           // For flick velocity on release
+    let lastDragTime = 0;
+    let flickVel = 0;            // degrees/ms for release
+
+    const MAX_ANGLE = 35;        // Hard limit (degrees)
+
+    // ── Scroll sway dynamics ──
+    let lastScrollY = window.scrollY || window.pageYOffset || 0;
+    let scrollIntensity = 0;     // Builds up as user scrolls, decays when idle
+    let scrollPhase = 0;         // Wave phase for continuous gentle sway
+    let scrollDir = 1;           // Direction multiplier based on scroll up/down
+
+    // ── Flip card ──
+    const toggleFlip = () => lanyardCardInner.classList.toggle('flipped');
+
+    lanyardCard.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleFlip(); }
+    });
+    if (lanyardHint) {
+      lanyardHint.addEventListener('click', (e) => { e.stopPropagation(); toggleFlip(); });
+    }
+
+    // Block browser ghost-image dragging
+    lanyardCard.addEventListener('dragstart', (e) => e.preventDefault());
+    lanyardSwing.addEventListener('dragstart', (e) => e.preventDefault());
+
+    // ── Helper: get X position from any event ──
+    function getX(e) {
+      if (e.touches && e.touches.length > 0) return e.touches[0].clientX;
+      if (e.changedTouches && e.changedTouches.length > 0) return e.changedTouches[0].clientX;
+      return e.clientX;
+    }
+
+    // ── DRAG START ──
+    function onDragStart(e) {
+      // For mouse events, only accept left button
+      if (e.type === 'mousedown' && e.button !== 0) return;
+      e.preventDefault();
+      e.stopPropagation();
+
+      isDragging = true;
+      hasMoved = false;
+      dragStartX = getX(e);
+      dragBaseAngle = angle;
+      lastDragX = dragStartX;
+      lastDragTime = performance.now();
+      flickVel = 0;
+
+      // Kill any existing momentum & active scroll sway
+      angularVel = 0;
+      yVel = 0;
+      yOffset = 0;
+      isDropSettled = true;
+      scrollIntensity = 0;
+
+      lanyardSwing.classList.add('is-dragging');
+
+      // Global listeners on document for tracking outside element
+      document.addEventListener('mousemove', onDragMove, { capture: true, passive: false });
+      document.addEventListener('mouseup', onDragEnd, { capture: true });
+      document.addEventListener('touchmove', onDragMove, { capture: true, passive: false });
+      document.addEventListener('touchend', onDragEnd, { capture: true });
+      document.addEventListener('touchcancel', onDragEnd, { capture: true });
+    }
+
+    // ── DRAG MOVE ──
+    function onDragMove(e) {
+      if (!isDragging) return;
+      e.preventDefault();
+
+      const cx = getX(e);
+      const dx = cx - dragStartX;
+
+      if (Math.abs(dx) > 3) hasMoved = true;
+
+      // Track velocity for flick release
+      const now = performance.now();
+      const dt = Math.max(now - lastDragTime, 1);
+      flickVel = (cx - lastDragX) / dt; // px/ms, positive = rightward
+      lastDragX = cx;
+      lastDragTime = now;
+
+      // Direct mapping: 1px mouse movement ≈ 0.175 degrees
+      // CSS rotate(+) with transform-origin top = bottom swings LEFT visually
+      // So we NEGATE: drag RIGHT → negative angle → bottom swings RIGHT
+      const targetAngle = dragBaseAngle + dx * -0.175;
+      angle = Math.max(-MAX_ANGLE, Math.min(MAX_ANGLE, targetAngle));
+    }
+
+    // ── DRAG END ──
+    function onDragEnd(e) {
+      if (!isDragging) return;
+      isDragging = false;
+
+      lanyardSwing.classList.remove('is-dragging');
+
+      document.removeEventListener('mousemove', onDragMove, { capture: true });
+      document.removeEventListener('mouseup', onDragEnd, { capture: true });
+      document.removeEventListener('touchmove', onDragMove, { capture: true });
+      document.removeEventListener('touchend', onDragEnd, { capture: true });
+      document.removeEventListener('touchcancel', onDragEnd, { capture: true });
+
+      if (!hasMoved) {
+        toggleFlip();
+      } else {
+        // Convert flick velocity (px/ms) to angular velocity (deg/frame @60fps ≈ 16.67ms)
+        // Negate to match inverted rotation direction
+        const flickDegPerFrame = flickVel * 16.67 * -0.15;
+        angularVel = Math.max(-4, Math.min(4, flickDegPerFrame));
+      }
+    }
+
+    // ── Attach drag listeners to the ENTIRE swing element (strap + hardware + card) ──
+    lanyardSwing.addEventListener('mousedown', onDragStart);
+    lanyardSwing.addEventListener('touchstart', onDragStart, { passive: false });
+
+    // ── Sync lanyard with header hide/show on scroll ──
+    if (lanyardWrapper) {
+      // Watch header for is-hidden class changes
+      const headerEl = document.getElementById('site-header');
+      if (headerEl) {
+        const syncLanyardWithHeader = () => {
+          if (headerEl.classList.contains('is-hidden')) {
+            lanyardWrapper.classList.add('is-hidden');
+          } else {
+            lanyardWrapper.classList.remove('is-hidden');
+          }
+        };
+
+        // Use MutationObserver to react to header class changes
+        const headerObserver = new MutationObserver(syncLanyardWithHeader);
+        headerObserver.observe(headerEl, { attributes: true, attributeFilter: ['class'] });
+      }
+    }
+
+    // ── Passive wheel listener for responsive wheel ticks ──
+    window.addEventListener('wheel', (e) => {
+      if (isDropSettled && !isDragging && Math.abs(e.deltaY) > 1) {
+        scrollDir = e.deltaY > 0 ? 1 : -1;
+        const add = Math.min(Math.abs(e.deltaY) * 0.02, 1.0);
+        scrollIntensity = Math.min(scrollIntensity + add, 2.5);
+      }
+    }, { passive: true });
+
+    // ── PHYSICS LOOP (60fps) ──
+    function stepPhysics() {
+      // 0. SCROLL REACTION (subtle, elegant sway while scrolling)
+      const currentScrollY = window.scrollY || window.pageYOffset || 0;
+      const scrollDelta = currentScrollY - lastScrollY;
+      lastScrollY = currentScrollY;
+
+      if (isDropSettled && !isDragging) {
+        if (Math.abs(scrollDelta) > 0.5) {
+          scrollDir = scrollDelta > 0 ? 1 : -1;
+          const add = Math.min(Math.abs(scrollDelta) * 0.08, 1.5);
+          scrollIntensity = Math.min(scrollIntensity + add, 2.5);
+        }
+      }
+
+      // 1. INITIAL DROP — gentle spring easing into resting position
+      if (!isDropSettled) {
+        const springK = 0.015;
+        const springDamping = 0.93;
+
+        yVel += (-yOffset) * springK;
+        yVel *= springDamping;
+        yOffset += yVel;
+
+        // Gentle pendulum sway during drop
+        if (Math.abs(yOffset) > 30) {
+          angle = 8 * Math.sin(performance.now() * 0.002) * Math.min(1, Math.abs(yOffset) / 200);
+        }
+
+        if (Math.abs(yOffset) < 0.3 && Math.abs(yVel) < 0.3) {
+          yOffset = 0;
+          yVel = 0;
+          isDropSettled = true;
+          angularVel = 0.5; // Small residual swing after landing
+        }
+      }
+
+      // 2. PENDULUM PHYSICS — gravity + damping + subtle scroll sway (in DEGREES)
+      if (!isDragging && isDropSettled) {
+        if (Math.abs(angularVel) > 0.003 || Math.abs(angle) > 0.04 || scrollIntensity > 0.01) {
+          // Gravity pulls back toward 0: torque proportional to sin(angle)
+          const gravityTorque = -0.22 * Math.sin(angle * Math.PI / 180);
+
+          let scrollForce = 0;
+          if (scrollIntensity > 0.02) {
+            scrollPhase += 0.09 * scrollDir;
+            // Very gentle organic sway (capped amplitude ~3.1 degrees max)
+            scrollForce = Math.sin(scrollPhase) * Math.min(scrollIntensity, 2.5) * 0.007;
+            scrollIntensity *= 0.95;
+          } else {
+            scrollIntensity = 0;
+          }
+
+          angularVel = (angularVel + gravityTorque + scrollForce) * 0.945;
+          angle += angularVel;
+
+          // Hard wall bounce
+          if (angle > MAX_ANGLE) {
+            angle = MAX_ANGLE;
+            angularVel = -Math.abs(angularVel) * 0.3;
+          } else if (angle < -MAX_ANGLE) {
+            angle = -MAX_ANGLE;
+            angularVel = Math.abs(angularVel) * 0.3;
+          }
+        } else {
+          angle = 0;
+          angularVel = 0;
+          scrollIntensity = 0;
+        }
+      }
+
+      // 3. RENDER
+      lanyardSwing.style.transform = `translate3d(0, ${yOffset.toFixed(1)}px, 0) rotate(${angle.toFixed(2)}deg)`;
+
+      requestAnimationFrame(stepPhysics);
+    }
+
+    // Start physics after brief delay for page load
+    setTimeout(() => requestAnimationFrame(stepPhysics), 250);
+  }
+
+  // ============================================
+  // SOURCE CODE & DEVTOOLS PROTECTION
+  // ============================================
+  // 1. Disable right-click context menu
+  document.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+  });
+
+  // 2. Block inspection shortcuts: F12, Ctrl+Shift+I/J/C, Ctrl+U, Ctrl+S
+  document.addEventListener('keydown', (e) => {
+    // F12
+    if (e.key === 'F12' || e.keyCode === 123) {
+      e.preventDefault();
+      return false;
+    }
+
+    const isCtrlOrCmd = e.ctrlKey || e.metaKey;
+    const isShiftOrAlt = e.shiftKey || e.altKey;
+
+    // Ctrl+Shift+I (DevTools), Ctrl+Shift+J (Console), Ctrl+Shift+C (Inspect)
+    // Mac: Cmd+Option+I, Cmd+Option+J, Cmd+Option+C
+    if (isCtrlOrCmd && isShiftOrAlt && ['i', 'I', 'j', 'J', 'c', 'C'].includes(e.key)) {
+      e.preventDefault();
+      return false;
+    }
+
+    // Ctrl+U (View Page Source), Ctrl+S (Save Page)
+    if (isCtrlOrCmd && ['u', 'U', 's', 'S'].includes(e.key)) {
+      e.preventDefault();
+      return false;
+    }
   });
 
 });
